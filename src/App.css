@@ -1,0 +1,25 @@
+/* App-level layout container */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start; /* Center ki jagah flex-start rakha hai taaki lambi list mobile pe kate nahi */
+  justify-content: center;
+  padding: 40px 16px;
+  background: transparent;
+}
+
+/* Is class ne problem create ki thi - Ab isse invisible kar diya hai */
+.app-inner {
+  width: 100%;
+  max-width: 100%; /* Width restriction hata di, taaki andar wala card size decide kare */
+  
+  /* Background aur Shadow hata diye taaki Glass Effect kaam kare */
+  background: transparent; 
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible; /* Hidden hata diya taaki shadows na katein */
+}
+
+.app-inner > * {
+  display: block;
+}

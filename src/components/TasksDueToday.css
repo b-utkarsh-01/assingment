@@ -1,0 +1,187 @@
+.task-container {
+  max-width: 70vw;
+  margin: 40px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  background: linear-gradient(90deg, #a78bfa, #3b82f6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.task-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+}
+
+.task-input,
+.task-select {
+  background: transparent;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* TasksDueToday.css */
+
+.task-select {
+  background: rgba(255, 255, 255, 0.05);
+  /* Transparent Dark */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+
+  /* Ye magic line add karein - Isse dropdown dark ho jayega */
+  color-scheme: dark;
+}
+
+/* Options ko specifically style karein */
+.task-select option {
+  background-color: #1e293b;
+  /* Dark Blue Background */
+  color: white;
+  /* White Text */
+}
+
+.task-input:focus {
+  border-color: #a78bfa;
+}
+
+.add-btn {
+  background: #a78bfa;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  font-weight: bold;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.add-btn:hover {
+  background: #c4b5fd;
+  transform: scale(1.05);
+}
+
+/* Seed button variant */
+.seed-btn {
+  background: linear-gradient(90deg, #34d399, #10b981);
+  color: #022c22;
+}
+
+.seed-btn:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* Glass card accent */
+.task-container {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px) saturate(120%);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-card {
+  background: #1e1e1e;
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.task-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #888;
+  align-items: center;
+}
+
+.tag {
+  background: #2d2d2d;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #444;
+}
+
+.complete-btn {
+  background: transparent;
+  border: 1px solid #3b82f6;
+  color: #3b82f6;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.complete-btn:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  color: #555;
+  padding: 40px;
+}
+
+@media (max-width: 600px) {
+  .task-form {
+    grid-template-columns: 1fr;
+  }
+}
